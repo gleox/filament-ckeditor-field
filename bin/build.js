@@ -45,7 +45,7 @@ const defaultOptions = {
 
 compile({
     ...defaultOptions,
-    entryPoints: ['./resources/js/index.js'],
+    entryPoints: ['./resources/js/ckeditor-component.js'],
     outfile: './resources/dist/filament-ckeditor-field.js',
     format: 'iife',
     loader: {

@@ -68,7 +68,7 @@ class CKEditor extends Field
 
     public function getContent(): string
     {
-        return $this->evaluate($this->content);
+        return (string) $this->evaluate($this->content);
     }
 
     public function getName(): string
@@ -89,5 +89,10 @@ class CKEditor extends Field
 
         // If not explicitly set, use config value as default
         return config('filament-ckeditor-field.upload_url');
+    }
+
+    public function getLicenseKey(): ?string
+    {
+        return config('filament-ckeditor-field.license_key', 'GPL');
     }
 }
